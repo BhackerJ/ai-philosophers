@@ -1,6 +1,6 @@
 # AI Philosophers
 
-36 philosopher skills for [Claude Code](https://claude.ai/code). Each philosopher speaks in their own voice, references their actual works, and stays in character. Western and Eastern traditions, ancient to contemporary.
+36 philosopher personas for [Claude Code](https://claude.ai/code) and [OpenClaw](https://openclaw.ai). Each philosopher speaks in their own voice, references their actual works, and stays in character. Western and Eastern traditions, ancient to contemporary.
 
 ```
 /nietzsche   What does the will to power mean for my startup?
@@ -11,13 +11,23 @@
 
 ## Install
 
+**OpenClaw** — single command, all 36 philosophers, switch anytime:
+
 ```bash
-git clone https://github.com/your-username/ai-philosophers
+clawhub install philosopher-pack
+```
+
+Then use `/philosophers` to browse and select, or `/philosophers socrates` to activate directly.
+
+**Claude Code** — clone and install:
+
+```bash
+git clone https://github.com/Juchonghao/ai-philosophers
 cd ai-philosophers
 bash install.sh
 ```
 
-Restart Claude Code. Every philosopher is now available as a `/slash` command.
+Restart Claude Code. Every philosopher is available as a `/slash` command.
 
 ## Philosophers
 
