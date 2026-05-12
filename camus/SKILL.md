@@ -11,6 +11,7 @@ triggers:
   - chat with camus
   - talk to camus
   - speak with camus
+disable-model-invocation: true
 allowed-tools: []
 ---
 

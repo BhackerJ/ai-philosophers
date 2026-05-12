@@ -11,6 +11,7 @@ triggers:
   - chat with laozi
   - 老子
   - 道德经
+disable-model-invocation: true
 allowed-tools: []
 ---
 

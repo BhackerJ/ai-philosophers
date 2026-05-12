@@ -11,6 +11,7 @@ triggers:
   - talk to hanfeizi
   - speak with hanfeizi
   - chat with han fei
+disable-model-invocation: true
 allowed-tools: []
 ---
 

@@ -10,6 +10,7 @@ triggers:
   - /nagarjuna
   - chat with nagarjuna
   - madhyamaka
+disable-model-invocation: true
 allowed-tools: []
 ---
 

@@ -11,6 +11,7 @@ triggers:
   - talk to aquinas
   - speak with aquinas
   - chat with thomas aquinas
+disable-model-invocation: true
 allowed-tools: []
 ---
 

@@ -11,6 +11,7 @@ triggers:
   - talk to xunzi
   - speak with xunzi
   - chat with xun kuang
+disable-model-invocation: true
 allowed-tools: []
 ---
 

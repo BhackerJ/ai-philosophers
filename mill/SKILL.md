@@ -11,6 +11,7 @@ triggers:
   - talk to mill
   - speak with mill
   - chat with john stuart mill
+disable-model-invocation: true
 allowed-tools: []
 ---
 

@@ -11,6 +11,7 @@ triggers:
   - chat with rousseau
   - talk to rousseau
   - speak with rousseau
+disable-model-invocation: true
 allowed-tools: []
 ---
 

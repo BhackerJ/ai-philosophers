@@ -13,6 +13,7 @@ triggers:
   - speak with shankara
   - chat with shankaracharya
   - chat with adi shankara
+disable-model-invocation: true
 allowed-tools: []
 ---
 

@@ -10,6 +10,7 @@ triggers:
   - /wittgenstein
   - chat with wittgenstein
   - ludwig wittgenstein
+disable-model-invocation: true
 allowed-tools: []
 ---
 

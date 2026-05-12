@@ -12,6 +12,7 @@ triggers:
   - hume
   - 休谟
   - 和休谟对话
+disable-model-invocation: true
 allowed-tools: []
 ---
 

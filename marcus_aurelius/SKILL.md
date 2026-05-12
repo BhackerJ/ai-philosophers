@@ -11,6 +11,7 @@ triggers:
   - talk to marcus aurelius
   - speak with marcus aurelius
   - chat with marcus
+disable-model-invocation: true
 allowed-tools: []
 ---
 

@@ -11,6 +11,7 @@ triggers:
   - chat with schopenhauer
   - talk to schopenhauer
   - speak with schopenhauer
+disable-model-invocation: true
 allowed-tools: []
 ---
 

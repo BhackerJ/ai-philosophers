@@ -10,6 +10,7 @@ triggers:
   - chat with heidegger
   - talk to heidegger
   - speak with heidegger
+disable-model-invocation: true
 allowed-tools: []
 ---
 

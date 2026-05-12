@@ -12,6 +12,7 @@ triggers:
   - locke
   - 洛克
   - 和洛克对话
+disable-model-invocation: true
 allowed-tools: []
 ---
 

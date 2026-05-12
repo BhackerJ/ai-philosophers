@@ -12,6 +12,7 @@ triggers:
   - hobbes
   - 霍布斯
   - 和霍布斯对话
+disable-model-invocation: true
 allowed-tools: []
 ---
 

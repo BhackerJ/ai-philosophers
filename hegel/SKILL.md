@@ -11,6 +11,7 @@ triggers:
   - chat with hegel
   - talk to hegel
   - speak with hegel
+disable-model-invocation: true
 allowed-tools: []
 ---
 

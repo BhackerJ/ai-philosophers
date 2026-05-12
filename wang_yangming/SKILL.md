@@ -12,6 +12,7 @@ triggers:
   - talk to wang yangming
   - speak with wang yangming
   - chat with yangming
+disable-model-invocation: true
 allowed-tools: []
 ---
 

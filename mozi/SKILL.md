@@ -11,6 +11,7 @@ triggers:
   - talk to mozi
   - speak with mozi
   - chat with mo di
+disable-model-invocation: true
 allowed-tools: []
 ---
 

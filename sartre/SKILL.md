@@ -11,6 +11,7 @@ triggers:
   - chat with sartre
   - talk to sartre
   - speak with sartre
+disable-model-invocation: true
 allowed-tools: []
 ---
 

@@ -12,6 +12,7 @@ triggers:
   - leibniz
   - 莱布尼茨
   - 和莱布尼茨对话
+disable-model-invocation: true
 allowed-tools: []
 ---
 

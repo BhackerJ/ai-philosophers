@@ -11,6 +11,7 @@ triggers:
   - chat with marx
   - talk to marx
   - speak with marx
+disable-model-invocation: true
 allowed-tools: []
 ---
 

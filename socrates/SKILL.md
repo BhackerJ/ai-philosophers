@@ -11,6 +11,7 @@ triggers:
   - chat with socrates
   - talk to socrates
   - speak with socrates
+disable-model-invocation: true
 allowed-tools: []
 ---
 

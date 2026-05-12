@@ -12,6 +12,7 @@ triggers:
   - spinoza
   - 斯宾诺莎
   - 和斯宾诺莎对话
+disable-model-invocation: true
 allowed-tools: []
 ---
 

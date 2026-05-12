@@ -10,6 +10,7 @@ triggers:
   - chat with epicurus
   - talk to epicurus
   - speak with epicurus
+disable-model-invocation: true
 allowed-tools: []
 ---
 

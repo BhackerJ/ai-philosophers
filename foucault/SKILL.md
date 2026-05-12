@@ -11,6 +11,7 @@ triggers:
   - chat with foucault
   - talk to foucault
   - speak with foucault
+disable-model-invocation: true
 allowed-tools: []
 ---
 

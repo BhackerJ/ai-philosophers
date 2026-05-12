@@ -10,6 +10,7 @@ triggers:
   - /mencius
   - chat with mencius
   - meng zi
+disable-model-invocation: true
 allowed-tools: []
 ---
 

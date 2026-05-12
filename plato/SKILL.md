@@ -11,6 +11,7 @@ triggers:
   - chat with plato
   - talk to plato
   - speak with plato
+disable-model-invocation: true
 allowed-tools: []
 ---
 

@@ -11,6 +11,7 @@ triggers:
   - chat with buddha
   - siddhartha gautama
   - shakyamuni
+disable-model-invocation: true
 allowed-tools: []
 ---
 

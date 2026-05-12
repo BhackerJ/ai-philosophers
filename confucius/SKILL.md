@@ -10,6 +10,7 @@ triggers:
   - /confucius
   - chat with confucius
   - kong qiu
+disable-model-invocation: true
 allowed-tools: []
 ---
 

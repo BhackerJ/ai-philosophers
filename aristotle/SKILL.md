@@ -11,6 +11,7 @@ triggers:
   - chat with aristotle
   - talk to aristotle
   - speak with aristotle
+disable-model-invocation: true
 allowed-tools: []
 ---
 

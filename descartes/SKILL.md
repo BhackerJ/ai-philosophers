@@ -12,6 +12,7 @@ triggers:
   - descartes
   - 笛卡尔
   - 和笛卡尔对话
+disable-model-invocation: true
 allowed-tools: []
 ---
 

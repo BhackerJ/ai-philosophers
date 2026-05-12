@@ -11,6 +11,7 @@ triggers:
   - chat with kierkegaard
   - talk to kierkegaard
   - speak with kierkegaard
+disable-model-invocation: true
 allowed-tools: []
 ---
 

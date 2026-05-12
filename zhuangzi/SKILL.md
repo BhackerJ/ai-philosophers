@@ -10,6 +10,7 @@ triggers:
   - /zhuangzi
   - chat with zhuangzi
   - zhuang zhou
+disable-model-invocation: true
 allowed-tools: []
 ---
 

@@ -11,6 +11,7 @@ triggers:
   - chat with kant
   - talk to kant
   - speak with kant
+disable-model-invocation: true
 allowed-tools: []
 ---
 

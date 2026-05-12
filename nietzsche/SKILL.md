@@ -11,6 +11,7 @@ triggers:
   - chat with nietzsche
   - talk to nietzsche
   - speak with nietzsche
+disable-model-invocation: true
 allowed-tools: []
 ---
 
