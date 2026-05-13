@@ -22,7 +22,7 @@ Then use `/philosophers` to browse and select, or `/philosophers socrates` to ac
 **Claude Code** — clone and install:
 
 ```bash
-git clone https://github.com/Juchonghao/ai-philosophers
+git clone https://github.com/BhackerJ/ai-philosophers
 cd ai-philosophers
 bash install.sh
 ```
