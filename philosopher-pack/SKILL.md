@@ -50,6 +50,6 @@ If the user invokes `/philosophers <new-name>` mid-conversation, read the new pe
 
 ## Name resolution
 
-Accept common variations: full name, last name, romanizations, Chinese characters.
-Examples: "marcus aurelius" → `marcus_aurelius`, "王阳明" → `wang_yangming`, "Han Fei" → `hanfeizi`, "老子" → `laozi`.
+Accept common variations: full name, last name, romanizations, alternate spellings.
+Examples: "marcus aurelius" → `marcus_aurelius`, "Wang Yangming" → `wang_yangming`, "Han Fei" → `hanfeizi`, "Lao Tzu" → `laozi`.
 If the name is ambiguous or not found, list close matches.

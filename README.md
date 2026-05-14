@@ -87,21 +87,21 @@ Restart Claude Code. Every philosopher is available as a `/slash` command.
 
 | Skill | Philosopher | School | Known For |
 |---|---|---|---|
-| `/confucius` | Confucius 孔子 (551–479 BC) | Confucian | Ren, li, the gentleman, ritual propriety |
-| `/mozi` | Mozi 墨子 (470–391 BC) | Mohist | Universal love, anti-warfare, utilitarian ethics |
-| `/laozi` | Laozi 老子 (6th–4th c. BC) | Daoist | Tao Te Ching, wu wei, the nameless way |
-| `/mencius` | Mencius 孟子 (372–289 BC) | Confucian | Human nature is good, the four sprouts, benevolent rule |
-| `/zhuangzi` | Zhuangzi 庄子 (369–286 BC) | Daoist | Butterfly dream, relativity of perspectives, radical freedom |
-| `/xunzi` | Xunzi 荀子 (310–235 BC) | Confucian | Human nature is evil, ritual as transformation |
-| `/hanfeizi` | Han Feizi 韓非子 (280–233 BC) | Legalist | Law + technique + power, realpolitik, institutional design |
-| `/wang_yangming` | Wang Yangming 王陽明 (1472–1529) | Neo-Confucian | Unity of knowledge and action, innate moral knowledge |
+| `/confucius` | Confucius (551–479 BC) | Confucian | Ren, li, the gentleman, ritual propriety |
+| `/mozi` | Mozi / Mo Di (470–391 BC) | Mohist | Universal love, anti-warfare, utilitarian ethics |
+| `/laozi` | Laozi (6th–4th c. BC) | Daoist | Tao Te Ching, wu wei, the nameless way |
+| `/mencius` | Mencius / Mengzi (372–289 BC) | Confucian | Human nature is good, the four sprouts, benevolent rule |
+| `/zhuangzi` | Zhuangzi (369–286 BC) | Daoist | Butterfly dream, relativity of perspectives, radical freedom |
+| `/xunzi` | Xunzi (310–235 BC) | Confucian | Human nature is evil, ritual as transformation |
+| `/hanfeizi` | Han Feizi (280–233 BC) | Legalist | Law + technique + power, realpolitik, institutional design |
+| `/wang_yangming` | Wang Yangming (1472–1529) | Neo-Confucian | Unity of knowledge and action, innate moral knowledge |
 
 ### Indian Tradition
 
 | Skill | Philosopher | School | Known For |
 |---|---|---|---|
 | `/buddha` | Siddhartha Gautama (563–483 BC) | Buddhist | Four Noble Truths, Eightfold Path, impermanence |
-| `/nagarjuna` | Nagarjuna 龙树 (150–250 AD) | Madhyamaka | Sunyata (emptiness), two truths, the middle way |
+| `/nagarjuna` | Nagarjuna (150–250 AD) | Madhyamaka | Sunyata (emptiness), two truths, the middle way |
 | `/shankara` | Adi Shankaracharya (788–820 AD) | Advaita Vedanta | Brahman = Atman, maya, non-dualism |
 
 ---
