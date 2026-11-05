@@ -2,6 +2,11 @@ name: Archive traffic stats
 
 # GitHub keeps repository traffic for only 14 days. This appends a weekly
 # snapshot of views, clones, referrers and popular paths to stats/traffic.json.
+#
+# The traffic API is not readable with the default GITHUB_TOKEN. Add a repo
+# secret TRAFFIC_TOKEN: a fine-grained personal access token scoped to this
+# repository with "Administration: Read-only" permission. Without it the
+# workflow exits early and does nothing.
 
 on:
   schedule:
@@ -18,10 +23,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch traffic and merge
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.TRAFFIC_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
           set -euo pipefail
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "TRAFFIC_TOKEN secret not set; skipping (see comment at top of this workflow)."
+            exit 0
+          fi
           mkdir -p stats
           [ -f stats/traffic.json ] || echo '{"views":{},"clones":{},"snapshots":[]}' > stats/traffic.json
           gh api "repos/$REPO/traffic/views" > /tmp/views.json

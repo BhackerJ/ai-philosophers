@@ -1,6 +1,6 @@
 # Traffic archive
 
-`traffic.json` is appended weekly by `.github/workflows/traffic.yml` (GitHub only keeps 14 days of traffic data itself).
+`traffic.json` is appended weekly by `.github/workflows/traffic.yml` (GitHub only keeps 14 days of traffic data itself). It needs a `TRAFFIC_TOKEN` repository secret: a fine-grained personal access token for this repo with **Administration: Read-only**, because the traffic API is not readable with the default Actions token.
 
 - `views` / `clones`: per-day counts and unique visitors
 - `snapshots[]`: weekly star/fork counts, top referrers, and top paths
