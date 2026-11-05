@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+      - name: Pack personas are in sync with SKILL.md
+        run: bash scripts/sync-personas.sh --check
+      - name: Every persona has frontmatter, Verified Quotations, and Behavioral Rules
+        run: |
+          fail=0
+          for f in */SKILL.md; do
+            case "$f" in philosopher-pack/*|symposium/*) continue ;; esac
+            for s in "^name: " "^## Verified Quotations" "^## Behavioral Rules" "^- Do not know events"; do
+              grep -q "$s" "$f" || { echo "$f: missing $s"; fail=1; }
+            done
+          done
+          exit $fail
+      - name: Plugin manifest is valid
+        run: claude plugin validate .
+
+  # Runs the model against each skill (costs a few cents per case). Needs ANTHROPIC_API_KEY in repo secrets.
+  evals:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install -g @anthropic-ai/claude-code
+      - name: Run eval suite
+        run: |
+          claude plugin eval . --trust-plugin --ablation none -j 4 \
+            --threshold 0.8 --max-cost-usd 5 --no-publish --json results.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results
+          path: |
+            results.json
+            evals/results/

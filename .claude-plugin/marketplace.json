@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "42 philosopher personas as Claude Code skills, plus /symposium debates: Socrates to Arendt, Confucius to Shankara.",
-    "version": "1.2.0"
+    "version": "1.3.0"
   },
   "plugins": [
     {
       "name": "philosophers",
       "description": "Talk with 42 philosophers in their own voice, or make them debate with /symposium. Greek, Roman, medieval, modern, 20th-century, Chinese, and Indian traditions.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "author": {
         "name": "BhackerJ"
       },

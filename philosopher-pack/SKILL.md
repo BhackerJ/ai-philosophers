@@ -1,7 +1,7 @@
 ---
 name: philosophers
 preamble-tier: 1
-version: 1.2.0
+version: 1.3.0
 description: "42 philosopher personas (Socrates to Arendt, Confucius to Shankara). Use /philosophers <name> to speak with any of them, or /philosophers debate <name> <name> <question> to stage a debate."
 triggers:
   - /philosophers

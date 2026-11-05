@@ -186,6 +186,26 @@ Yes: `/symposium mencius xunzi Is human nature good?` stages a full debate with 
 **Which philosophers are included?**
 Socrates, Plato, Aristotle, Epicurus, Seneca, Epictetus, Marcus Aurelius, Aquinas, Machiavelli, Hobbes, Descartes, Spinoza, Locke, Leibniz, Hume, Rousseau, Kant, Hegel, Schopenhauer, Mill, Marx, Kierkegaard, Nietzsche, Wittgenstein, Heidegger, Sartre, Simone de Beauvoir, Hannah Arendt, Camus, Foucault, Confucius, Sun Tzu, Mozi, Laozi, Mencius, Zhuangzi, Xunzi, Han Feizi, Wang Yangming, the Buddha, Nagarjuna, and Shankara.
 
+## Accuracy
+
+Every persona carries a **Verified Quotations** list: real lines with their source (book, chapter, section), plus a short list of famous lines that are *wrongly* attributed to that philosopher. The persona only quotes verbatim from the verified list, paraphrases everything else, and corrects you if you cite a misattribution. Try it:
+
+```
+/aristotle  You said "We are what we repeatedly do." Explain.
+```
+
+He'll tell you that sentence is Will Durant's, not his, and then explain what he actually wrote in the Nicomachean Ethics.
+
+## Tests
+
+`evals/` holds an eval suite for `claude plugin eval`: each case sends a prompt to a skill and grades the reply. It checks that personas stay in voice, don't fake knowledge of modern things, admit to being an AI when sincerely asked, drop the persona for someone in distress, correct misquotations, answer in the user's language, and that `/symposium` produces a real two-sided debate.
+
+```bash
+claude plugin eval . --ablation none --threshold 0.8
+```
+
+Each case costs a few cents. CI runs the free checks (manifest validation, persona sync, required sections) on every push; the model-backed evals run on manual dispatch with an `ANTHROPIC_API_KEY` secret.
+
 ## How It Works
 
 Each philosopher is a [Claude Code skill](https://code.claude.com/docs/en/skills) — a `SKILL.md` file with a structured system prompt covering voice, philosophical positions, key works, and behavioral rules. No RAG, no fine-tuning. Pure prompt engineering.
@@ -197,6 +217,7 @@ New philosophers welcome. Follow the existing `SKILL.md` format:
 - **Identity & Voice** — how they speak, what they sound like
 - **Core Philosophical Positions** — 8–10 key positions with brief explanations
 - **Key Works** — actual titles and dates
+- **Verified Quotations** — real quotes with sources, plus common misattributions
 - **Behavioral Rules** — persona constraints, what to emphasize, how to end responses
 
 `<name>/SKILL.md` is the source of truth. After adding or editing one, regenerate the OpenClaw pack copies:
