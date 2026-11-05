@@ -1,6 +1,6 @@
 # AI Philosophers
 
-36 philosopher personas for [Claude Code](https://claude.ai/code) and [OpenClaw](https://openclaw.ai). Each philosopher speaks in their own voice, references their actual works, and stays in character. Western and Eastern traditions, ancient to contemporary.
+**AI Philosophers is a free, open-source set of 36 philosopher personas for [Claude Code](https://claude.ai/code) and [OpenClaw](https://openclaw.ai).** Install it, type `/socrates` or `/confucius`, and ask anything. The philosopher answers in their own voice, argues from their actual positions, and cites their real works. It covers Greek, Roman, medieval, early modern, 19th- and 20th-century Western thought, plus the Chinese and Indian traditions.
 
 ```
 /nietzsche   What does the will to power mean for my startup?
@@ -11,15 +11,16 @@
 
 ## Install
 
-**OpenClaw** — single command, all 36 philosophers, switch anytime:
+**Claude Code (plugin, recommended):** run these inside Claude Code:
 
-```bash
-clawhub install philosopher-pack
+```
+/plugin marketplace add BhackerJ/ai-philosophers
+/plugin install philosophers@ai-philosophers
 ```
 
-Then use `/philosophers` to browse and select, or `/philosophers socrates` to activate directly.
+Plugin skills are namespaced, so you call them as `/philosophers:nietzsche`, `/philosophers:laozi`, and so on. Update later with `/plugin marketplace update ai-philosophers`.
 
-**Claude Code** — clone and install:
+**Claude Code (plain skills):** gives you short names like `/nietzsche`:
 
 ```bash
 git clone https://github.com/BhackerJ/ai-philosophers
@@ -27,11 +28,17 @@ cd ai-philosophers
 bash install.sh
 ```
 
-Restart Claude Code. Every philosopher is available as a `/slash` command.
-
-To install only a few: `bash install.sh socrates kant laozi`. Re-running the script updates existing installs.
+Restart Claude Code. Every philosopher is available as a `/slash` command. To install only a few: `bash install.sh socrates kant laozi`. Re-running the script updates existing installs.
 
 > **Note:** versions of `install.sh` before 1.1.0 stopped after the first skill (only `/aquinas` got installed). If that happened to you, pull and run it again.
+
+**OpenClaw:** one command, all 36 philosophers, switch anytime:
+
+```bash
+clawhub install philosopher-pack
+```
+
+Then use `/philosophers` to browse and select, or `/philosophers socrates` to activate directly.
 
 ## Philosophers
 
@@ -135,6 +142,29 @@ Each philosopher:
 /confucius  Mozi argues that universal love is better than your graduated love. How do you respond?
 /mozi       Confucius says ritual is essential. Why do you disagree?
 ```
+
+## FAQ
+
+**Can Claude role-play a philosopher accurately?**
+Each persona is a written brief covering the philosopher's voice, 8–10 core positions, key works with dates, and rules about what they could and couldn't know. That keeps answers grounded in what the philosopher actually argued instead of generic "wise" filler. It's still a language model: check quotes against the primary texts before citing them.
+
+**What happens if I ask about something modern, like AI or startups?**
+The philosopher doesn't pretend to know it. They ask you to describe it, then reason about it from their own principles, the way Aristotle might analyze a company as a kind of household or polis.
+
+**How is this different from Character.AI or a custom GPT?**
+It runs inside your coding agent (Claude Code or OpenClaw), with no account or app. It's plain Markdown you can read and edit, it's MIT-licensed, and every persona is grounded in specific works rather than a personality sketch.
+
+**Does it work in other languages?**
+Yes. Each philosopher replies in the language you write in, including Chinese, German, French, and Japanese.
+
+**Will it stay in character no matter what?**
+Almost. A philosopher steps out of character if you sincerely ask whether you're talking to an AI, or if you seem to be in real distress. In that case it responds directly and points you toward real help.
+
+**Can I make philosophers debate each other?**
+Ask one about another's position, e.g. `/mencius Xunzi says human nature is evil. Answer him.` Switch philosophers mid-conversation to get the reply.
+
+**Which philosophers are included?**
+Socrates, Plato, Aristotle, Epicurus, Marcus Aurelius, Aquinas, Hobbes, Descartes, Spinoza, Locke, Leibniz, Hume, Rousseau, Kant, Hegel, Schopenhauer, Mill, Marx, Kierkegaard, Nietzsche, Wittgenstein, Heidegger, Sartre, Camus, Foucault, Confucius, Mozi, Laozi, Mencius, Zhuangzi, Xunzi, Han Feizi, Wang Yangming, the Buddha, Nagarjuna, and Shankara.
 
 ## How It Works
 

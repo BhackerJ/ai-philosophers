@@ -1,0 +1,74 @@
+{
+  "name": "ai-philosophers",
+  "owner": {
+    "name": "BhackerJ"
+  },
+  "metadata": {
+    "description": "36 philosopher personas as Claude Code skills: Socrates to Foucault, Confucius to Shankara.",
+    "version": "1.1.0"
+  },
+  "plugins": [
+    {
+      "name": "philosophers",
+      "description": "Talk with 36 philosophers in their own voice: Greek, medieval, modern, 20th-century, Chinese, and Indian traditions. Each is a slash command, e.g. /nietzsche or /confucius.",
+      "version": "1.1.0",
+      "author": {
+        "name": "BhackerJ"
+      },
+      "homepage": "https://github.com/BhackerJ/ai-philosophers",
+      "repository": "https://github.com/BhackerJ/ai-philosophers",
+      "license": "MIT",
+      "keywords": [
+        "philosophy",
+        "persona",
+        "roleplay",
+        "socrates",
+        "nietzsche",
+        "confucius",
+        "stoicism",
+        "education"
+      ],
+      "category": "education",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./aquinas",
+        "./aristotle",
+        "./buddha",
+        "./camus",
+        "./confucius",
+        "./descartes",
+        "./epicurus",
+        "./foucault",
+        "./hanfeizi",
+        "./hegel",
+        "./heidegger",
+        "./hobbes",
+        "./hume",
+        "./kant",
+        "./kierkegaard",
+        "./laozi",
+        "./leibniz",
+        "./locke",
+        "./marcus_aurelius",
+        "./marx",
+        "./mencius",
+        "./mill",
+        "./mozi",
+        "./nagarjuna",
+        "./nietzsche",
+        "./plato",
+        "./rousseau",
+        "./sartre",
+        "./schopenhauer",
+        "./shankara",
+        "./socrates",
+        "./spinoza",
+        "./wang_yangming",
+        "./wittgenstein",
+        "./xunzi",
+        "./zhuangzi"
+      ]
+    }
+  ]
+}
