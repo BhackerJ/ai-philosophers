@@ -28,6 +28,8 @@ jobs:
             done
           done
           exit $fail
+      - name: Site is up to date
+        run: python3 scripts/build-site.py && git diff --exit-code docs/
       - name: Plugin manifest is valid
         run: claude plugin validate .
 

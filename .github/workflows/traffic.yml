@@ -1,0 +1,54 @@
+name: Archive traffic stats
+
+# GitHub keeps repository traffic for only 14 days. This appends a weekly
+# snapshot of views, clones, referrers and popular paths to stats/traffic.json.
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch traffic and merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          mkdir -p stats
+          [ -f stats/traffic.json ] || echo '{"views":{},"clones":{},"snapshots":[]}' > stats/traffic.json
+          gh api "repos/$REPO/traffic/views" > /tmp/views.json
+          gh api "repos/$REPO/traffic/clones" > /tmp/clones.json
+          gh api "repos/$REPO/traffic/popular/referrers" > /tmp/referrers.json
+          gh api "repos/$REPO/traffic/popular/paths" > /tmp/paths.json
+          gh api "repos/$REPO" --jq '{stars:.stargazers_count,forks:.forks_count,watchers:.subscribers_count}' > /tmp/repo.json
+          python3 - <<'PY'
+          import json, datetime
+          db = json.load(open("stats/traffic.json"))
+          for key, src in (("views", "/tmp/views.json"), ("clones", "/tmp/clones.json")):
+              for day in json.load(open(src))[key]:
+                  db[key][day["timestamp"][:10]] = {"count": day["count"], "uniques": day["uniques"]}
+          db["snapshots"].append({
+              "date": datetime.date.today().isoformat(),
+              "repo": json.load(open("/tmp/repo.json")),
+              "referrers": json.load(open("/tmp/referrers.json")),
+              "paths": json.load(open("/tmp/paths.json")),
+          })
+          db["views"] = dict(sorted(db["views"].items()))
+          db["clones"] = dict(sorted(db["clones"].items()))
+          json.dump(db, open("stats/traffic.json", "w"), indent=1)
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add stats/traffic.json
+          git diff --cached --quiet || git commit -m "stats: traffic snapshot $(date -u +%F)"
+          git push

@@ -213,6 +213,10 @@ claude plugin eval . --ablation none --threshold 0.8
 
 Each case costs a few cents. CI runs the free checks (manifest validation, persona sync, required sections) on every push; the model-backed evals run on manual dispatch with an `ANTHROPIC_API_KEY` secret.
 
+## Website
+
+[bhackerj.github.io/ai-philosophers](https://bhackerj.github.io/ai-philosophers/) is built from `docs/` by `scripts/build-site.py`; rerun it after adding a philosopher. Weekly traffic snapshots are archived in `stats/traffic.json`.
+
 ## How It Works
 
 Each philosopher is a [Claude Code skill](https://code.claude.com/docs/en/skills) — a `SKILL.md` file with a structured system prompt covering voice, philosophical positions, key works, and behavioral rules. No RAG, no fine-tuning. Pure prompt engineering.
