@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install philosopher skills to ~/.claude/skills/
-#   bash install.sh                  # all philosophers + the /philosophers switchboard
+#   bash install.sh                  # all philosophers + /symposium + the /philosophers switchboard
 #   bash install.sh socrates kant    # only the ones you name
 set -euo pipefail
 
@@ -28,7 +28,7 @@ for name in "${names[@]}"; do
   rm -rf "${SKILLS_DIR:?}/$name"
   cp -r "$src" "$SKILLS_DIR/"
   echo "  installed: $name"
-  [ "$name" != "philosopher-pack" ] && count=$((count + 1))
+  case "$name" in philosopher-pack|symposium) ;; *) count=$((count + 1)) ;; esac
 done
 
 echo ""

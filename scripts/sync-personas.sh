@@ -13,7 +13,7 @@ check=0
 stale=0
 for skill in "$ROOT"/*/SKILL.md; do
   name=$(basename "$(dirname "$skill")")
-  [ "$name" = "philosopher-pack" ] && continue
+  case "$name" in philosopher-pack|symposium) continue ;; esac
   body=$(awk 'c>=2 {print; next} /^---$/ {c++}' "$skill")
   target="$OUT/$name.md"
   if [ "$check" = 1 ]; then

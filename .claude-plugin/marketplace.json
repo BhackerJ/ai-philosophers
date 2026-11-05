@@ -4,14 +4,14 @@
     "name": "BhackerJ"
   },
   "metadata": {
-    "description": "36 philosopher personas as Claude Code skills: Socrates to Foucault, Confucius to Shankara.",
-    "version": "1.1.0"
+    "description": "42 philosopher personas as Claude Code skills, plus /symposium debates: Socrates to Arendt, Confucius to Shankara.",
+    "version": "1.2.0"
   },
   "plugins": [
     {
       "name": "philosophers",
-      "description": "Talk with 36 philosophers in their own voice: Greek, medieval, modern, 20th-century, Chinese, and Indian traditions. Each is a slash command, e.g. /nietzsche or /confucius.",
-      "version": "1.1.0",
+      "description": "Talk with 42 philosophers in their own voice, or make them debate with /symposium. Greek, Roman, medieval, modern, 20th-century, Chinese, and Indian traditions.",
+      "version": "1.2.0",
       "author": {
         "name": "BhackerJ"
       },
@@ -19,25 +19,30 @@
       "repository": "https://github.com/BhackerJ/ai-philosophers",
       "license": "MIT",
       "keywords": [
-        "philosophy",
+        "confucius",
+        "debate",
+        "education",
+        "nietzsche",
         "persona",
+        "philosophy",
         "roleplay",
         "socrates",
-        "nietzsche",
-        "confucius",
         "stoicism",
-        "education"
+        "the-art-of-war"
       ],
       "category": "education",
       "source": "./",
       "strict": false,
       "skills": [
         "./aquinas",
+        "./arendt",
         "./aristotle",
+        "./beauvoir",
         "./buddha",
         "./camus",
         "./confucius",
         "./descartes",
+        "./epictetus",
         "./epicurus",
         "./foucault",
         "./hanfeizi",
@@ -50,6 +55,7 @@
         "./laozi",
         "./leibniz",
         "./locke",
+        "./machiavelli",
         "./marcus_aurelius",
         "./marx",
         "./mencius",
@@ -61,9 +67,12 @@
         "./rousseau",
         "./sartre",
         "./schopenhauer",
+        "./seneca",
         "./shankara",
         "./socrates",
         "./spinoza",
+        "./sunzi",
+        "./symposium",
         "./wang_yangming",
         "./wittgenstein",
         "./xunzi",

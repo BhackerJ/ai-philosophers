@@ -1,12 +1,13 @@
 # AI Philosophers
 
-**AI Philosophers is a free, open-source set of 36 philosopher personas for [Claude Code](https://claude.ai/code) and [OpenClaw](https://openclaw.ai).** Install it, type `/socrates` or `/confucius`, and ask anything. The philosopher answers in their own voice, argues from their actual positions, and cites their real works. It covers Greek, Roman, medieval, early modern, 19th- and 20th-century Western thought, plus the Chinese and Indian traditions.
+**AI Philosophers is a free, open-source set of 42 philosopher personas, plus a `/symposium` command that makes them debate each other, for [Claude Code](https://claude.ai/code) and [OpenClaw](https://openclaw.ai).** Install it, type `/socrates` or `/confucius`, and ask anything. The philosopher answers in their own voice, argues from their actual positions, and cites their real works. It covers Greek, Roman, medieval, Renaissance, early modern, 19th- and 20th-century Western thought, plus the Chinese and Indian traditions.
 
 ```
 /nietzsche   What does the will to power mean for my startup?
 /confucius   How should I lead my team?
 /camus       Is this work actually meaningful?
 /hanfeizi    How do I build a system that doesn't depend on good people?
+/symposium   kant mill Is it ever right to lie?
 ```
 
 ## Install
@@ -32,7 +33,7 @@ Restart Claude Code. Every philosopher is available as a `/slash` command. To in
 
 > **Note:** versions of `install.sh` before 1.1.0 stopped after the first skill (only `/aquinas` got installed). If that happened to you, pull and run it again.
 
-**OpenClaw:** one command, all 36 philosophers, switch anytime:
+**OpenClaw:** one command, all 42 philosophers, switch anytime:
 
 ```bash
 clawhub install philosopher-pack
@@ -50,6 +51,8 @@ Then use `/philosophers` to browse and select, or `/philosophers socrates` to ac
 | `/plato` | Plato (428–348 BC) | Greek | Theory of Forms, the Republic, the cave |
 | `/aristotle` | Aristotle (384–322 BC) | Greek | Logic, ethics, politics, biology — the system-builder |
 | `/epicurus` | Epicurus (341–270 BC) | Hellenistic | Pleasure as absence of pain, friendship, ataraxia |
+| `/seneca` | Seneca (c. 4 BC–65 AD) | Roman Stoic | Letters to Lucilius, the shortness of life, anger |
+| `/epictetus` | Epictetus (c. 50–135 AD) | Roman Stoic | Born a slave; the dichotomy of control, the Enchiridion |
 | `/marcus_aurelius` | Marcus Aurelius (121–180 AD) | Roman Stoic | Meditations, duty, impermanence, the view from above |
 
 ### Medieval
@@ -58,10 +61,11 @@ Then use `/philosophers` to browse and select, or `/philosophers socrates` to ac
 |---|---|---|---|
 | `/aquinas` | Thomas Aquinas (1225–1274) | Scholastic | Five Ways, faith + reason, natural law |
 
-### Early Modern
+### Renaissance & Early Modern
 
 | Skill | Philosopher | Tradition | Known For |
 |---|---|---|---|
+| `/machiavelli` | Niccolò Machiavelli (1469–1527) | Florentine | The Prince, virtù and fortuna, republics, realpolitik |
 | `/hobbes` | Thomas Hobbes (1588–1679) | British | Leviathan, "war of all against all", the social contract |
 | `/descartes` | René Descartes (1596–1650) | French | Cogito ergo sum, mind-body dualism, method of doubt |
 | `/spinoza` | Baruch Spinoza (1632–1677) | Dutch | God or Nature, determinism, the intellectual love of God |
@@ -89,6 +93,8 @@ Then use `/philosophers` to browse and select, or `/philosophers socrates` to ac
 | `/wittgenstein` | Ludwig Wittgenstein (1889–1951) | Austrian-British | Language games, meaning as use, whereof one cannot speak |
 | `/heidegger` | Martin Heidegger (1889–1976) | German | Being and Time, Dasein, authenticity, technology |
 | `/sartre` | Jean-Paul Sartre (1905–1980) | French | Existence precedes essence, radical freedom, bad faith |
+| `/beauvoir` | Simone de Beauvoir (1908–1986) | French | The Second Sex, ethics of ambiguity, "one becomes a woman" |
+| `/arendt` | Hannah Arendt (1906–1975) | German-American | Totalitarianism, the banality of evil, action and plurality |
 | `/camus` | Albert Camus (1913–1960) | French-Algerian | Absurdism, revolt, one must imagine Sisyphus happy |
 | `/foucault` | Michel Foucault (1926–1984) | French | Power/knowledge, genealogy, discipline and punish |
 
@@ -99,6 +105,7 @@ Then use `/philosophers` to browse and select, or `/philosophers socrates` to ac
 | Skill | Philosopher | School | Known For |
 |---|---|---|---|
 | `/confucius` | Confucius (551–479 BC) | Confucian | Ren, li, the gentleman, ritual propriety |
+| `/sunzi` | Sun Tzu / Sunzi (c. 544–496 BC) | Military strategist | The Art of War, winning without fighting, know yourself and the enemy |
 | `/mozi` | Mozi / Mo Di (470–391 BC) | Mohist | Universal love, anti-warfare, utilitarian ethics |
 | `/laozi` | Laozi (6th–4th c. BC) | Daoist | Tao Te Ching, wu wei, the nameless way |
 | `/mencius` | Mencius / Mengzi (372–289 BC) | Confucian | Human nature is good, the four sprouts, benevolent rule |
@@ -116,6 +123,19 @@ Then use `/philosophers` to browse and select, or `/philosophers socrates` to ac
 | `/shankara` | Adi Shankaracharya (788–820 AD) | Advaita Vedanta | Brahman = Atman, maya, non-dualism |
 
 ---
+
+## Debates: `/symposium`
+
+Put 2–4 philosophers in a room and give them a question:
+
+```
+/symposium kant mill Is it ever right to lie?
+/symposium mencius xunzi Is human nature good or evil?
+/symposium machiavelli confucius How should a leader treat their people?
+/symposium epicurus epictetus seneca What does a happy life need?
+```
+
+Each speaker gives an opening statement, they argue back and forth for two rounds by name, give closing lines, and the host ends with a short neutral summary of where they really disagree. On OpenClaw, use `/philosophers debate kant mill Is it ever right to lie?`.
 
 ## Usage
 
@@ -161,10 +181,10 @@ Yes. Each philosopher replies in the language you write in, including Chinese, G
 Almost. A philosopher steps out of character if you sincerely ask whether you're talking to an AI, or if you seem to be in real distress. In that case it responds directly and points you toward real help.
 
 **Can I make philosophers debate each other?**
-Ask one about another's position, e.g. `/mencius Xunzi says human nature is evil. Answer him.` Switch philosophers mid-conversation to get the reply.
+Yes: `/symposium mencius xunzi Is human nature good?` stages a full debate with opening statements, rebuttals, and a neutral summary. You can also ask one philosopher about another's view, e.g. `/mencius Xunzi says human nature is evil. Answer him.`
 
 **Which philosophers are included?**
-Socrates, Plato, Aristotle, Epicurus, Marcus Aurelius, Aquinas, Hobbes, Descartes, Spinoza, Locke, Leibniz, Hume, Rousseau, Kant, Hegel, Schopenhauer, Mill, Marx, Kierkegaard, Nietzsche, Wittgenstein, Heidegger, Sartre, Camus, Foucault, Confucius, Mozi, Laozi, Mencius, Zhuangzi, Xunzi, Han Feizi, Wang Yangming, the Buddha, Nagarjuna, and Shankara.
+Socrates, Plato, Aristotle, Epicurus, Seneca, Epictetus, Marcus Aurelius, Aquinas, Machiavelli, Hobbes, Descartes, Spinoza, Locke, Leibniz, Hume, Rousseau, Kant, Hegel, Schopenhauer, Mill, Marx, Kierkegaard, Nietzsche, Wittgenstein, Heidegger, Sartre, Simone de Beauvoir, Hannah Arendt, Camus, Foucault, Confucius, Sun Tzu, Mozi, Laozi, Mencius, Zhuangzi, Xunzi, Han Feizi, Wang Yangming, the Buddha, Nagarjuna, and Shankara.
 
 ## How It Works
 
@@ -185,7 +205,7 @@ New philosophers welcome. Follow the existing `SKILL.md` format:
 bash scripts/sync-personas.sh
 ```
 
-Open a PR. Suggestions for next additions: Epictetus, Seneca, Voltaire, Beauvoir, Ibn Rushd (Averroes), Nishida Kitaro.
+Open a PR. Suggestions for next additions: Augustine, Montaigne, Avicenna, Ibn Khaldun, Dogen, Zhu Xi, Voltaire, Nishida Kitaro.
 
 ## License
 
