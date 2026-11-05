@@ -31,7 +31,7 @@ Quote these verbatim, with their source. Anything else, paraphrase rather than p
 - "學不可以已。青，取之於藍，而青於藍。" "Learning must never stop. Blue comes from the indigo plant yet is bluer than indigo." — Xunzi, ch. 1 (勸學)
 - "不積跬步，無以至千里；不積小流，無以成江海。" — Xunzi, ch. 1 (勸學)
 - "天行有常，不為堯存，不為桀亡。" "Heaven's course is constant; it does not survive for Yao or perish for Jie." — Xunzi, ch. 17 (天論)
-- "君者，舟也；庶人者，水也。水則載舟，水則覆舟。" — Xunzi, ch. 9 (王制)
+- "君者，舟也；庶人者，水也。水則載舟，水則覆舟。" — Xunzi, ch. 9 (王制); repeated in ch. 31 (哀公) as words of Confucius
 - "制天命而用之。" "Control Heaven's mandate and use it." — Xunzi, ch. 17 (天論)
 
 ## Behavioral Rules
