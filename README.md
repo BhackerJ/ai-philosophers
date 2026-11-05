@@ -1,6 +1,6 @@
 # AI Philosophers
 
-**AI Philosophers is a free, open-source set of 42 philosopher personas, plus a `/symposium` command that makes them debate each other, for [Claude Code](https://claude.ai/code) and [OpenClaw](https://openclaw.ai).** Install it, type `/socrates` or `/confucius`, and ask anything. The philosopher answers in their own voice, argues from their actual positions, and cites their real works. It covers Greek, Roman, medieval, Renaissance, early modern, 19th- and 20th-century Western thought, plus the Chinese and Indian traditions.
+**AI Philosophers is a free, open-source set of 48 philosopher personas, plus a `/symposium` command that makes them debate each other, for [Claude Code](https://claude.ai/code) and [OpenClaw](https://openclaw.ai).** Install it, type `/socrates` or `/confucius`, and ask anything. The philosopher answers in their own voice, argues from their actual positions, and cites their real works. It covers Greek, Roman, medieval, Renaissance, early modern, 19th- and 20th-century Western thought, plus the Islamic, Chinese, Indian, and Japanese traditions.
 
 ```
 /nietzsche   What does the will to power mean for my startup?
@@ -33,7 +33,7 @@ Restart Claude Code. Every philosopher is available as a `/slash` command. To in
 
 > **Note:** versions of `install.sh` before 1.1.0 stopped after the first skill (only `/aquinas` got installed). If that happened to you, pull and run it again.
 
-**OpenClaw:** one command, all 42 philosophers, switch anytime:
+**OpenClaw:** one command, all 48 philosophers, switch anytime:
 
 ```bash
 clawhub install philosopher-pack
@@ -59,13 +59,17 @@ Then use `/philosophers` to browse and select, or `/philosophers socrates` to ac
 
 | Skill | Philosopher | Tradition | Known For |
 |---|---|---|---|
+| `/augustine` | Augustine of Hippo (354–430) | Christian / Neoplatonic | Confessions, the restless heart, time, the two cities |
 | `/aquinas` | Thomas Aquinas (1225–1274) | Scholastic | Five Ways, faith + reason, natural law |
+| `/avicenna` | Avicenna / Ibn Sina (c. 980–1037) | Islamic Peripatetic | Necessary Existent, essence and existence, the Flying Man, the Canon of Medicine |
+| `/ibn_khaldun` | Ibn Khaldun (1332–1406) | Islamic / Maghribi | The Muqaddima, asabiyya, the cycle of dynasties, early economics |
 
 ### Renaissance & Early Modern
 
 | Skill | Philosopher | Tradition | Known For |
 |---|---|---|---|
 | `/machiavelli` | Niccolò Machiavelli (1469–1527) | Florentine | The Prince, virtù and fortuna, republics, realpolitik |
+| `/montaigne` | Michel de Montaigne (1533–1592) | French | The Essays, "What do I know?", self-study, tolerance |
 | `/hobbes` | Thomas Hobbes (1588–1679) | British | Leviathan, "war of all against all", the social contract |
 | `/descartes` | René Descartes (1596–1650) | French | Cogito ergo sum, mind-body dualism, method of doubt |
 | `/spinoza` | Baruch Spinoza (1632–1677) | Dutch | God or Nature, determinism, the intellectual love of God |
@@ -112,15 +116,17 @@ Then use `/philosophers` to browse and select, or `/philosophers socrates` to ac
 | `/zhuangzi` | Zhuangzi (369–286 BC) | Daoist | Butterfly dream, relativity of perspectives, radical freedom |
 | `/xunzi` | Xunzi (310–235 BC) | Confucian | Human nature is evil, ritual as transformation |
 | `/hanfeizi` | Han Feizi (280–233 BC) | Legalist | Law + technique + power, realpolitik, institutional design |
+| `/zhu_xi` | Zhu Xi (1130–1200) | Neo-Confucian | Principle and qi, investigation of things, the Four Books |
 | `/wang_yangming` | Wang Yangming (1472–1529) | Neo-Confucian | Unity of knowledge and action, innate moral knowledge |
 
-### Indian Tradition
+### Indian & Japanese Tradition
 
 | Skill | Philosopher | School | Known For |
 |---|---|---|---|
 | `/buddha` | Siddhartha Gautama (563–483 BC) | Buddhist | Four Noble Truths, Eightfold Path, impermanence |
 | `/nagarjuna` | Nagarjuna (150–250 AD) | Madhyamaka | Sunyata (emptiness), two truths, the middle way |
 | `/shankara` | Adi Shankaracharya (788–820 AD) | Advaita Vedanta | Brahman = Atman, maya, non-dualism |
+| `/dogen` | Dōgen (1200–1253) | Japanese Sōtō Zen | Shōbōgenzō, just sitting, practice is realization, being-time |
 
 ---
 
@@ -133,6 +139,7 @@ Put 2–4 philosophers in a room and give them a question:
 /symposium mencius xunzi Is human nature good or evil?
 /symposium machiavelli confucius How should a leader treat their people?
 /symposium epicurus epictetus seneca What does a happy life need?
+/symposium zhu_xi wang_yangming Is knowledge found in things or in the mind?
 ```
 
 Each speaker gives an opening statement, they argue back and forth for two rounds by name, give closing lines, and the host ends with a short neutral summary of where they really disagree. On OpenClaw, use `/philosophers debate kant mill Is it ever right to lie?`.
@@ -184,7 +191,7 @@ Almost. A philosopher steps out of character if you sincerely ask whether you're
 Yes: `/symposium mencius xunzi Is human nature good?` stages a full debate with opening statements, rebuttals, and a neutral summary. You can also ask one philosopher about another's view, e.g. `/mencius Xunzi says human nature is evil. Answer him.`
 
 **Which philosophers are included?**
-Socrates, Plato, Aristotle, Epicurus, Seneca, Epictetus, Marcus Aurelius, Aquinas, Machiavelli, Hobbes, Descartes, Spinoza, Locke, Leibniz, Hume, Rousseau, Kant, Hegel, Schopenhauer, Mill, Marx, Kierkegaard, Nietzsche, Wittgenstein, Heidegger, Sartre, Simone de Beauvoir, Hannah Arendt, Camus, Foucault, Confucius, Sun Tzu, Mozi, Laozi, Mencius, Zhuangzi, Xunzi, Han Feizi, Wang Yangming, the Buddha, Nagarjuna, and Shankara.
+Socrates, Plato, Aristotle, Epicurus, Seneca, Epictetus, Marcus Aurelius, Augustine, Avicenna, Aquinas, Ibn Khaldun, Machiavelli, Montaigne, Hobbes, Descartes, Spinoza, Locke, Leibniz, Hume, Rousseau, Kant, Hegel, Schopenhauer, Mill, Marx, Kierkegaard, Nietzsche, Wittgenstein, Heidegger, Sartre, Simone de Beauvoir, Hannah Arendt, Camus, Foucault, Confucius, Sun Tzu, Mozi, Laozi, Mencius, Zhuangzi, Xunzi, Han Feizi, Zhu Xi, Wang Yangming, the Buddha, Nagarjuna, Shankara, and Dōgen.
 
 ## Accuracy
 
@@ -226,7 +233,7 @@ New philosophers welcome. Follow the existing `SKILL.md` format:
 bash scripts/sync-personas.sh
 ```
 
-Open a PR. Suggestions for next additions: Augustine, Montaigne, Avicenna, Ibn Khaldun, Dogen, Zhu Xi, Voltaire, Nishida Kitaro.
+Open a PR. Suggestions for next additions: Voltaire, Nishida Kitaro, Al-Ghazali, Maimonides, Mary Wollstonecraft, Frantz Fanon.
 
 ## License
 

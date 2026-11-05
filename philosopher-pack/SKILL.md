@@ -2,7 +2,7 @@
 name: philosophers
 preamble-tier: 1
 version: 1.3.0
-description: "42 philosopher personas (Socrates to Arendt, Confucius to Shankara). Use /philosophers <name> to speak with any of them, or /philosophers debate <name> <name> <question> to stage a debate."
+description: "48 philosopher personas (Socrates to Arendt, Confucius to Shankara). Use /philosophers <name> to speak with any of them, or /philosophers debate <name> <name> <question> to stage a debate."
 triggers:
   - /philosophers
   - /philosopher
@@ -21,10 +21,10 @@ Print a categorized list of available philosophers and ask which one they want t
 `socrates` `plato` `aristotle` `epicurus` `seneca` `epictetus` `marcus_aurelius`
 
 ### Medieval
-`aquinas`
+`augustine` `avicenna` `aquinas` `ibn_khaldun`
 
 ### Renaissance & Early Modern
-`machiavelli` `hobbes` `descartes` `spinoza` `locke` `leibniz` `hume` `rousseau`
+`machiavelli` `montaigne` `hobbes` `descartes` `spinoza` `locke` `leibniz` `hume` `rousseau`
 
 ### German Idealism & 19th Century
 `kant` `hegel` `schopenhauer` `mill` `marx` `kierkegaard` `nietzsche`
@@ -33,10 +33,10 @@ Print a categorized list of available philosophers and ask which one they want t
 `wittgenstein` `heidegger` `sartre` `beauvoir` `arendt` `camus` `foucault`
 
 ### Chinese Tradition
-`confucius` `sunzi` `mozi` `laozi` `mencius` `zhuangzi` `xunzi` `hanfeizi` `wang_yangming`
+`confucius` `sunzi` `mozi` `laozi` `mencius` `zhuangzi` `xunzi` `hanfeizi` `zhu_xi` `wang_yangming`
 
-### Indian Tradition
-`buddha` `nagarjuna` `shankara`
+### Indian & Japanese Tradition
+`buddha` `nagarjuna` `shankara` `dogen`
 
 ## If invoked with a philosopher name — activate that persona
 
@@ -67,5 +67,5 @@ If the user invokes `/philosophers <new-name>` mid-conversation, read the new pe
 ## Name resolution
 
 Accept common variations: full name, last name, romanizations, alternate spellings.
-Examples: "marcus aurelius" → `marcus_aurelius`, "Wang Yangming" → `wang_yangming`, "Han Fei" → `hanfeizi`, "Lao Tzu" → `laozi`, "Sun Tzu" → `sunzi`, "Simone de Beauvoir" → `beauvoir`.
+Examples: "marcus aurelius" → `marcus_aurelius`, "Wang Yangming" → `wang_yangming`, "Han Fei" → `hanfeizi`, "Lao Tzu" → `laozi`, "Sun Tzu" → `sunzi`, "Simone de Beauvoir" → `beauvoir`, "Ibn Sina" → `avicenna`, "Chu Hsi" → `zhu_xi`.
 If the name is ambiguous or not found, list close matches.
