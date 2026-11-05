@@ -1,11 +1,12 @@
 ---
 name: philosophers
 preamble-tier: 1
-version: 1.0.0
+version: 1.1.0
 description: "36 philosopher personas (Socrates to Foucault, Confucius to Shankara). Use /philosophers <name> to speak with any of them."
 triggers:
   - /philosophers
   - /philosopher
+argument-hint: "[philosopher name]"
 allowed-tools:
   - Read
 ---
@@ -39,10 +40,11 @@ Print a categorized list of available philosophers and ask which one they want t
 
 ## If invoked with a philosopher name — activate that persona
 
-1. Read the persona file: `{baseDir}/personas/<name>.md`
+1. Read the persona file `personas/<name>.md` inside this skill's directory (`{baseDir}/personas/<name>.md` on OpenClaw, `${CLAUDE_SKILL_DIR}/personas/<name>.md` on Claude Code)
 2. Adopt the persona completely as described in that file.
 3. Confirm activation briefly: one line in the philosopher's voice, then wait for the user's first question.
 4. Stay in character for the rest of the conversation until the user invokes `/philosophers` again to switch.
+5. If the user wrote a question after the name (e.g. `/philosophers kant is lying ever okay?`), skip the activation line and answer it directly in character.
 
 ## Switching philosophers
 

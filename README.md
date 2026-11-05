@@ -29,6 +29,10 @@ bash install.sh
 
 Restart Claude Code. Every philosopher is available as a `/slash` command.
 
+To install only a few: `bash install.sh socrates kant laozi`. Re-running the script updates existing installs.
+
+> **Note:** versions of `install.sh` before 1.1.0 stopped after the first skill (only `/aquinas` got installed). If that happened to you, pull and run it again.
+
 ## Philosophers
 
 ### Ancient Greece & Rome
@@ -109,9 +113,10 @@ Restart Claude Code. Every philosopher is available as a `/slash` command.
 ## Usage
 
 Each philosopher:
-- Responds entirely in character — no breaking persona
+- Responds entirely in character
 - References their actual works naturally
-- Stays within their historical knowledge (no anachronisms)
+- Stays within their historical knowledge: ask them about something modern and they'll ask you to describe it, then reason about it from their own principles
+- Steps out of character if you sincerely ask whether you're talking to an AI, or if you seem to be in real distress
 - Responds in whatever language you write in
 
 **Ask anything:**
@@ -133,16 +138,22 @@ Each philosopher:
 
 ## How It Works
 
-Each philosopher is a [Claude Code skill](https://docs.anthropic.com/en/docs/claude-code/skills) — a `SKILL.md` file with a structured system prompt covering voice, philosophical positions, key works, and behavioral rules. No RAG, no fine-tuning. Pure prompt engineering.
+Each philosopher is a [Claude Code skill](https://code.claude.com/docs/en/skills) — a `SKILL.md` file with a structured system prompt covering voice, philosophical positions, key works, and behavioral rules. No RAG, no fine-tuning. Pure prompt engineering.
 
 ## Contributing
 
 New philosophers welcome. Follow the existing `SKILL.md` format:
-- `name`, `description`, `triggers` frontmatter
+- `name`, `description`, `triggers`, `argument-hint`, `disable-model-invocation: true` frontmatter
 - **Identity & Voice** — how they speak, what they sound like
 - **Core Philosophical Positions** — 8–10 key positions with brief explanations
 - **Key Works** — actual titles and dates
 - **Behavioral Rules** — persona constraints, what to emphasize, how to end responses
+
+`<name>/SKILL.md` is the source of truth. After adding or editing one, regenerate the OpenClaw pack copies:
+
+```bash
+bash scripts/sync-personas.sh
+```
 
 Open a PR. Suggestions for next additions: Epictetus, Seneca, Voltaire, Beauvoir, Ibn Rushd (Averroes), Nishida Kitaro.
 
